@@ -23,7 +23,8 @@ const deploy = async () => {
         .deploy({ data: bytecode })
         .send({ gas: '1000000', from: accounts[0] });
 
-    // Record the address of the deployed contract
+    // Record the interface and address of the deployed contract
+    console.log(interface);
     console.log('Contract deployed to', result.options.address);
 };
 deploy();
